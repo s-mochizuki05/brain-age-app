@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>脳年齢診断 | Brain Age Assessment</title>
+    <meta name="description" content="あなたの脳年齢を測定します。瞬間記憶と計算問題に挑戦しましょう。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=2">
+
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Background Elements -->
+        <div class="bg-orb orb-1"></div>
+        <div class="bg-orb orb-2"></div>
+
+        <main id="main-content">
+            <!-- Home Section -->
+            <section id="home" class="screen active">
+                <div class="content-wrapper">
+                    <h1 class="title-logo">
+                        <span class="small">脳年齢診断</span>
+                    </h1>
+
+                    <p class="subtitle">あなたの脳は、実年齢より若いですか？</p>
+
+                    <button id="btn-start" class="btn btn-primary btn-lg">
+                        <span class="btn-text">診断を開始する</span>
+                        <div class="btn-shine"></div>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Game Intro Section -->
+            <section id="game-intro" class="screen hidden">
+                <div class="card glass-panel">
+                    <h2 id="intro-title" class="section-title">ゲーム説明</h2>
+                    <p id="intro-desc" class="text-body">これから2つのテストを行います。</p>
+                    <div class="instruction-list">
+                        <div class="instruction-item">
+                            <span class="icon">⚡️</span>
+                            <div class="text">
+                                <h3>瞬間記憶</h3>
+                                <p>一瞬だけ表示される数字を記憶し、順番にタップしてください。</p>
+                            </div>
+                        </div>
+                        <div class="instruction-item">
+                            <span class="icon">🧮</span>
+                            <div class="text">
+                                <h3>計算問題</h3>
+                                <p>次々と出題される計算問題を素早く解いてください。</p>
+                            </div>
+                        </div>
+                        <div class="instruction-item">
+                            <span class="icon">🔢</span>
+                            <div class="text">
+                                <h3>早押しマトリックス</h3>
+                                <p>1から25までの数字を順番にタップしてください。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="btn-intro-start" class="btn btn-primary">ゲームスタート</button>
+                </div>
+            </section>
+
+            <!-- Game Play Section -->
+            <section id="game-play" class="screen hidden">
+                <div class="game-header">
+                    <div class="progress-bar">
+                        <div id="game-progress" class="progress-fill"></div>
+                    </div>
+                    <div class="game-info">
+                        <span id="game-title-display">Game Title</span>
+                        <span id="game-score-display">Score: 0</span>
+                    </div>
+                </div>
+
+                <div id="game-area" class="game-area">
+                    <!-- Game content will be injected here -->
+                </div>
+            </section>
+
+            <!-- Result Section -->
+            <section id="result" class="screen hidden">
+                <div class="card glass-panel result-card">
+                    <h2 class="section-title">診断結果</h2>
+                    <div class="brain-age-display">
+                        <span class="label">あなたの脳年齢</span>
+                        <div class="age-value">
+                            <span id="result-age">--</span>
+                            <span class="unit">歳</span>
+                        </div>
+                    </div>
+
+                    <div class="score-details">
+                        <div class="score-item">
+                            <span class="label">瞬間記憶</span>
+                            <span id="result-score-memory" class="value">--</span>
+                        </div>
+                        <div class="score-item">
+                            <span class="label">計算力</span>
+                            <span id="result-score-math" class="value">--</span>
+                        </div>
+                        <div class="score-item">
+                            <span class="label">マトリックス</span>
+                            <span id="result-score-matrix" class="value">--</span>
+                        </div>
+                    </div>
+
+
+                    <button id="btn-retry" class="btn btn-secondary">もう一度診断する</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>
