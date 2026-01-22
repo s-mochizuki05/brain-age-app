@@ -750,12 +750,138 @@ h1.title-logo {
     pointer-events: none;
 }
 
-@keyframes pop-in {
-    from {
-        transform: translate(-50%, -50%) scale(0);
+to {
+    transform: translate(-50%, -50%) scale(1);
+}
+}
+
+/* =========================================
+   Responsive Design for Mobile & Tablet
+   ========================================= */
+
+@media screen and (max-width: 768px) {
+    /* Tablet & Large Phone Adjustments */
+
+    .title-logo {
+        font-size: 2.5rem;
     }
 
-    to {
-        transform: translate(-50%, -50%) scale(1);
+    .title-logo .small {
+        font-size: 2.8rem;
+        /* Slightly smaller than 3.5rem */
+    }
+
+    .memory-card {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Mobile Adjustments */
+
+    .app-container {
+        padding: 10px;
+        /* More space for content */
+    }
+
+    /* Typography */
+    .title-logo .small {
+        font-size: 2.2rem;
+        /* Fit on screen */
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+    }
+
+    h2.section-title {
+        font-size: 1.5rem;
+    }
+
+    /* Components */
+    .glass-panel {
+        padding: 1.5rem;
+    }
+
+    .btn-lg {
+        padding: 16px 24px;
+        font-size: 1.1rem;
+    }
+
+    /* Memory Game */
+    .memory-card {
+        width: 55px;
+        height: 55px;
+        font-size: 1.5rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Math Game */
+    .problem-display {
+        font-size: 2.5rem;
+        /* Prevent wrapping */
+    }
+
+    .keypad {
+        gap: 8px;
+    }
+
+    .key-btn {
+        padding: 12px 0;
+        font-size: 1.3rem;
+    }
+
+    /* Matrix Game */
+    .matrix-grid {
+        gap: 4px;
+        /* Tighter gap */
+        max-width: 340px;
+    }
+
+    .matrix-cell {
+        border-radius: 6px;
+        font-size: 1.4rem;
+    }
+
+    .matrix-hud {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+
+    /* Result Screen */
+    .brain-age-display .age-value {
+        font-size: 4rem;
+    }
+
+    .score-details {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .score-item {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 2rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding-bottom: 5px;
+    }
+
+    .score-item:last-child {
+        border-bottom: none;
+    }
+
+    .score-item .label {
+        font-size: 1rem;
+        margin-bottom: 0;
+    }
+
+    .score-item .value {
+        font-size: 1.2rem;
+        font-weight: 700;
     }
 }
